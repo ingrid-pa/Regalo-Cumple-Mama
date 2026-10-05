@@ -1,265 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestro pequeño mundo ❤️</title>
-    <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz cumpleaños, mamá ✨</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div id="pantalla-bienvenida">
-        <div class="caja-bienvenida">
-            <span class="corazon-click">❤️</span>
-            <p class="texto-click">Haz clic en el corazón para abrir tu regalo</p>
+  <div id="pantalla-bienvenida">
+    <div class="caja-bienvenida">
+      <span class="corazon-click">🎁</span>
+      <p class="texto-click">Haz clic en el regalo para empezar</p>
+    </div>
+  </div>
+
+  <audio id="musica" src="musica.mp3" loop preload="auto"></audio>
+
+  <div class="corazones" aria-hidden="true">
+    <span>✦</span><span>•</span><span>✧</span><span>•</span><span>✦</span><span>✧</span>
+  </div>
+
+  <main>
+    <section id="inicio" class="vista activa">
+      <div class="escena">
+        <div class="texto-principal">
+          <p class="pequeno">PARA LA MEJOR MAMÁ DEL MUNDO</p>
+          <h1>52 años<br>de una vida<br>maravillosa</h1>
+          <p class="subtitulo">Mamá, hoy celebramos tu vida.<br>Feliz cumpleaños. ✨</p>
         </div>
-    </div>
 
-    <audio id="musica" src="musica.mp3" loop preload="auto"></audio>
+        <div class="arbol">
+          <svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" aria-label="Árbol de la vida decorado para un cumpleaños">
+            <g class="copa copa-1">
+              <ellipse cx="250" cy="145" rx="155" ry="100"/>
+              <ellipse cx="150" cy="210" rx="95" ry="80"/>
+              <ellipse cx="350" cy="210" rx="95" ry="80"/>
+              <ellipse cx="250" cy="235" rx="155" ry="95"/>
+            </g>
+            <g class="ramas">
+              <path d="M250 570 C245 480 255 400 250 330 C245 270 190 245 135 190 M250 330 C290 270 350 240 385 175 M250 400 C205 355 145 340 100 290 M250 365 C305 330 355 320 410 275" fill="none" stroke="#6b4657" stroke-width="28" stroke-linecap="round"/>
+              <path d="M250 400 C245 300 250 210 250 120" fill="none" stroke="#684151" stroke-width="18" stroke-linecap="round"/>
+            </g>
+            <g class="hojas">
+              <circle cx="250" cy="100" r="38"/><circle cx="190" cy="125" r="43"/><circle cx="310" cy="125" r="43"/><circle cx="130" cy="185" r="40"/><circle cx="370" cy="185" r="40"/><circle cx="250" cy="175" r="55"/><circle cx="170" cy="230" r="48"/><circle cx="330" cy="230" r="48"/><circle cx="250" cy="255" r="55"/>
+            </g>
+            <g class="corazones-arbol">
+              <circle cx="250" cy="88" r="7"/><circle cx="170" cy="150" r="6"/><circle cx="333" cy="145" r="7"/>
+              <circle cx="118" cy="220" r="6"/><circle cx="380" cy="225" r="6"/><circle cx="250" cy="205" r="8"/>
+              <text x="185" y="270">✦</text><text x="310" y="275">✦</text>
+            </g>
+          </svg>
+        </div>
 
-    <div class="corazones" aria-hidden="true">
-        <span>︎♡</span><span>︎♥</span><span>︎♡</span>
-        <span>︎♥</span><span>︎♡</span><span>︎♥</span>
-    </div>
-<main>
-        <section id="inicio" class="vista activa">
-            <div class="escena">
-                <div class="texto-principal">
-                    <p class="pequeno">PARA MI PERSONA FAVORITA</p>
-                    <h1>Tú, yo<br>y nuestras<br>aventuras</h1>
-                    <p class="subtitulo">Feliz cumpleaños y feliz aniversario,<br>mi amor. ♡</p>
-                </div>
+        <nav class="menu-arbol" aria-label="Recuerdos para mamá">
+          <button class="boton-arbol" data-vista="historia"><span>✦</span><strong>52 años de historia</strong></button>
+          <button class="boton-arbol" data-vista="cumpleanos"><span class="icono"><svg viewBox="0 0 24 24"><path d="M6 10h12v10H6z"/><path d="M4 14c2 2 4-2 6 0s4 2 6 0 4 0 4 0"/><path d="M12 10V6"/><path d="M12 6c-1.5-1.5 0-3 0-3s1.5 1.5 0 3z"/></svg></span><strong>Feliz cumpleaños</strong></button>
+          <button class="boton-arbol" data-vista="aniversario"><span>∞</span><strong>9.554 días contigo</strong></button>
+          <button class="boton-arbol" data-vista="recuerdos"><span class="icono"><svg viewBox="0 0 24 24"><path d="M4 8h4l1.5-2h5L16 8h4v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg></span><strong>Nuestros recuerdos</strong></button>
+          <button class="boton-arbol" data-vista="carta"><span class="icono"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 7 9-7"/></svg></span><strong>Una carta para ti</strong></button>
+        </nav>
+        <p class="instruccion">He preparado algo para ti, mamá ✨</p>
+      </div>
+    </section>
 
-                <div class="arbol">
-                    <svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg"
-                         aria-label="Árbol animado con hojas y corazones">
-                        <g class="copa copa-1">
-                            <ellipse cx="250" cy="145" rx="155" ry="100"/>
-                            <ellipse cx="150" cy="210" rx="95" ry="80"/>
-                            <ellipse cx="350" cy="210" rx="95" ry="80"/>
-                            <ellipse cx="250" cy="235" rx="155" ry="95"/>
-                        </g>
-                        <g class="ramas">
-                            <path d="M250 570 C245 480 255 400 250 330
-                                     C245 270 190 245 135 190
-                                     M250 330 C290 270 350 240 385 175
-                                     M250 400 C205 355 145 340 100 290
-                                     M250 365 C305 330 355 320 410 275"
-                                  fill="none" stroke="#6b4657" stroke-width="28"
-                                  stroke-linecap="round"/>
-                            <path d="M250 400 C245 300 250 210 250 120"
-                                  fill="none" stroke="#684151" stroke-width="18"
-                                  stroke-linecap="round"/>
-                        </g>
-                        <g class="hojas">
-                            <circle cx="250" cy="100" r="38"/>
-                            <circle cx="190" cy="125" r="43"/>
-                            <circle cx="310" cy="125" r="43"/>
-                            <circle cx="130" cy="185" r="40"/>
-                            <circle cx="370" cy="185" r="40"/>
-                            <circle cx="250" cy="175" r="55"/>
-                            <circle cx="170" cy="230" r="48"/>
-                            <circle cx="330" cy="230" r="48"/>
-                            <circle cx="250" cy="255" r="55"/>
-                        </g>
-                        <g class="corazones-arbol">
-                            <text x="245" y="95">♡</text>
-                            <text x="165" y="160">♥</text>
-                            <text x="330" y="150">♡</text>
-                            <text x="110" y="220">♥</text>
-                            <text x="370" y="230">♡</text>
-                            <text x="250" y="210">♥</text>
-                            <text x="190" y="270">♡</text>
-                            <text x="310" y="275">♥</text>
-                        </g>
-                    </svg>
-                </div>
+    <section id="historia" class="vista">
+      <article class="contenido">
+        <p class="fecha">6 DE OCTUBRE DE 2026</p>
+        <h2>52 años de historia ✦</h2>
 
-                <nav class="menu-arbol" aria-label="Recuerdos">
-                    <button class="boton-arbol" data-vista="historia"><span>♡</span><strong>Nuestra historia</strong></button>
-                    <button class="boton-arbol" data-vista="cumpleanos"><span class="icono">
-    <svg viewBox="0 0 24 24">
-        <path d="M6 10h12v10H6z"/>
-        <path d="M4 14c2 2 4-2 6 0s4 2 6 0 4 0 4 0"/>
-        <path d="M12 10V6"/>
-        <path d="M12 6c-1.5-1.5 0-3 0-3s1.5 1.5 0 3z"/>
-    </svg>
-</span><strong>Tu cumpleaños</strong></button>
-                    <button class="boton-arbol" data-vista="aniversario"><span>∞</span><strong>Nuestro aniversario</strong></button>
-                    <button class="boton-arbol" data-vista="recuerdos"><span class="icono">
-    <svg viewBox="0 0 24 24">
-        <path d="M4 8h4l1.5-2h5L16 8h4v11H4z"/>
-        <circle cx="12" cy="13.5" r="3.5"/>
-    </svg>
-</span><strong>Nuestros recuerdos</strong></button>
-                    <button class="boton-arbol" data-vista="carta"><span class="icono">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="3" y="5" width="18" height="14" rx="1"/>
-        <path d="M3 7l9 7 9-7"/>
-    </svg>
-</span>
-<strong>Una carta para ti</strong></button>
-                </nav>
-                <p class="instruccion">Elige un recuerdo de nuestra historia ♡</p>
-            </div>
-        </section>
+        <div class="foto-dedicatoria"><img src="imagenes/mama_joven.jpg" alt="Mamá de joven"></div>
+        <div class="dedicatoria">
+          <p>Hace 52 años comenzó una historia que todavía tenía muchísimo por escribir: <strong>la tuya.</strong> Una historia que no siempre ha sido fácil. La vida te obligó a crecer demasiado pronto y a superar momentos que nunca deberías haber tenido que vivir siendo tan pequeña. Pero seguiste adelante.</p>
+          <p>Creciste, construiste tu propia vida y, con el tiempo, empezaste a formar tu propia familia.</p>
+        </div>
 
-        <section id="historia" class="vista">
-            <article class="contenido">
-                <p class="fecha">UN RECUERDO DE NOSOTRAS</p>
-                <h2>Nuestra historia ♡</h2>
-                <div class="foto-dedicatoria"><img src="imagenes/nuestra-historia.jpg" alt="Fotografía de nosotras"></div>
-                <p class="dedicatoria"><p>
-Todo empezó el día de tu cumpleaños. Lo que parecía una fecha especial para ti
-terminó convirtiéndose también en el comienzo de la historia más bonita de mi vida.
-Desde aquel día hemos compartido risas, planes, discusiones, abrazos, momentos
-difíciles y muchísimos recuerdos que no cambiaría por nada.
-</p>
+        <div class="foto-dedicatoria"><img src="imagenes/mama_papa_jovenes.jpg" alt="Mamá y papá de jóvenes"></div>
+        <div class="dedicatoria">
+          <p>Junto a papá empezó una historia nueva. Después llegué yo y, años más tarde, Pitufina. Y quizá tú no seas consciente de todas las veces que has sido nuestro lugar seguro.</p>
+          <p>Has estado cuando todo iba bien, pero sobre todo cuando las cosas se complicaban. Siempre dispuesta a escuchar, ayudar, preocuparte o hacer lo que estuviera en tu mano para que nosotros estuviéramos bien.</p>
+          <p>Porque si hay algo que nunca nos ha faltado, <strong>eres tú.</strong></p>
+          <p>Hoy cumples 52 años y esta página no pretende contar toda tu vida. Sería imposible. Solo quiero recordarte una pequeña parte de todo lo que has significado y sigues significando para nosotros. Y, especialmente, <strong>para mí. ❤️</strong></p>
+        </div>
+        <button class="volver" data-vista="inicio">← Volver al árbol</button>
+      </article>
+    </section>
 
-<p>
-Han pasado 7 años desde que nuestras vidas se cruzaron, y todavía me parece
-increíble pensar que aquel día comenzó todo lo que hoy somos.
-</p>
+    <section id="cumpleanos" class="vista">
+      <article class="contenido">
+        <p class="fecha">HOY CELEBRAMOS TU VIDA</p>
+        <h2>Feliz 52 cumpleaños 🎂</h2>
+        <div class="foto-dedicatoria"><img src="imagenes/mama_actual.jpg" alt="Mamá en Londres"></div>
+        <div class="dedicatoria">
+          <p><strong>52 vueltas al sol.</strong> Y todavía te quedan muchísimas por dar. Así que hoy no toca pensar en los años que han pasado. Toca celebrar que estás aquí.</p>
+          <p>Celebrar que seguimos teniéndote. Que podemos seguir llamándote, abrazándote, riéndonos contigo y creando nuevos recuerdos.</p>
+          <p>Espero que este nuevo año te devuelva una pequeña parte de todo lo bueno que tú das constantemente a los demás. Que tengas motivos para reírte, lugares a los que viajar, momentos que recordar y muchísimos días rodeada de las personas que te queremos.</p>
+          <p><strong>Feliz 52 cumpleaños, mamá. ❤️</strong></p>
+          <p>De parte de papá, Pitufina y, especialmente hoy, de la pesada que ha hecho toda esta web para ti. 😂</p>
+        </div>
+        <button class="volver" data-vista="inicio">← Volver al árbol</button>
+      </article>
+    </section>
 
-<p>
-Gracias por aparecer en mi vida y por convertir una fecha tan especial en
-nuestro propio aniversario. ❤️
-</p>
+    <section id="aniversario" class="vista">
+      <article class="contenido">
+        <p class="fecha">DESDE EL 9 DE AGOSTO DE 2000</p>
+        <h2>9.554 días contigo ✦</h2>
+        <div class="foto-dedicatoria"><img src="imagenes/mama_yo_bebe.jpg" alt="Mamá conmigo cuando era bebé"></div>
+        <div class="dedicatoria">
+          <p><strong>9.554 días.</strong> Ese es el tiempo que ha pasado desde aquel 9 de agosto de 2000 hasta hoy. 9.554 días desde que llegué a tu vida y tú te convertiste en mi mamá.</p>
+          <p>Durante todo ese tiempo he tenido una suerte que quizá durante muchos años di por sentada: <strong>siempre has estado.</strong> He crecido contigo. He pasado de ser una niña que necesitaba a su madre para absolutamente todo a construir mi propia vida.</p>
+        </div>
+        <div class="foto-dedicatoria"><img src="imagenes/papas_yo_bebe.jpg" alt="Con mamá y papá cuando era pequeña"></div>
+        <div class="dedicatoria">
+          <p>He cambiado, he aprendido, me he equivocado y he crecido, pero hay algo que nunca ha cambiado: <strong>tú.</strong></p>
+          <p>Porque no importa la edad que tenga ni los kilómetros que haya entre nosotras. Cuando necesito algo, cuando tengo un problema, cuando tengo una noticia que contarte o simplemente cuando necesito escuchar tu voz, sé que estás ahí.</p>
+          <p>Durante muchos años ni siquiera supe lo que era echarte de menos. ¿Cómo iba a saberlo? <strong>Nunca me habías faltado.</strong></p>
+          <p>En agosto de 2020 la vida puso kilómetros entre tu casa y la mía. Tú en Manresa y yo en Bollullos de la Mitación. Y precisamente la distancia me hizo entender todavía más algo que antes parecía normal: <strong>tenerte cerca todos los días era un privilegio.</strong></p>
+        </div>
+        <div class="foto-dedicatoria"><img src="imagenes/mama_yo_actual.jpg" alt="Mamá y yo actualmente"></div>
+        <div class="dedicatoria">
+          <p>Hablamos prácticamente todos los días y, cuando pasa un día y no hablamos, lo noto. Me falta algo. <strong>Echo de menos escuchar tu voz.</strong></p>
+          <p>Después de 9.554 días sigo teniendo la enorme suerte de poder llamarte <strong>mamá. ❤️</strong></p>
+        </div>
+        <button class="volver" data-vista="inicio">← Volver al árbol</button>
+      </article>
+    </section>
 
-Te quiero muchísimo. ❤️</p>
-                <button class="volver" data-vista="inicio">← Volver al árbol</button>
-            </article>
-        </section>
+    <section id="recuerdos" class="vista">
+      <article class="contenido">
+        <p class="fecha">UNA VIDA EN FOTOGRAFÍAS</p>
+        <h2>Nuestros recuerdos 📷</h2>
+        <div class="dedicatoria">
+          <p>Hay miles de momentos que seguramente ya hemos olvidado. Días normales que no sabíamos que algún día echaríamos de menos. Viajes, cumpleaños, celebraciones, parques, vacaciones, tonterías, risas y fotografías hechas sin pensar demasiado.</p>
+          <p>Y después están esos recuerdos que basta con mirar una foto para que vuelvan de golpe.</p>
+        </div>
+        <div class="galeria">
+          <img src="imagenes/mama_hermanas_bebe.jpg" alt="Mamá con sus hermanas en la nieve">
+          <img src="imagenes/mama_maria_peque.jpg" alt="Mamá con Pitufina de pequeña">
+          <img src="imagenes/maria_yo_bebe.jpg" alt="Pitufina y yo de pequeñas en la nieve">
+          <img src="imagenes/maria_yo_ninas.jpg" alt="Pitufina y yo en un recuerdo especial">
+          <img src="imagenes/family_jacky.jpg" alt="Un recuerdo familiar con Jacky">
+          <img src="imagenes/mama_nietos.jpg" alt="Mamá en un recuerdo familiar con los perros">
+          <img src="imagenes/family_abuelo.jpg" alt="Recuerdo familiar con el abuelo">
+          <img src="imagenes/family_actual.jpg" alt="Recuerdo familiar de viaje">
+          <img src="imagenes/family_actual_1.jpg" alt="Fotografía familiar actual">
+        </div>
+        <div class="dedicatoria">
+          <p>Aquí solo caben unos pocos, pero detrás de cada fotografía hay algo que no puede verse: <strong>todo lo que hemos vivido juntos.</strong></p>
+          <p>Papá, tú, Pitufina y yo. <strong>Nuestra familia.</strong></p>
+          <p>Y todavía nos quedan muchísimas fotografías por hacer. ❤️</p>
+        </div>
+        <button class="volver" data-vista="inicio">← Volver al árbol</button>
+      </article>
+    </section>
 
-        <section id="cumpleanos" class="vista">
-            <article class="contenido">
-                <p class="fecha">HOY CELEBRAMOS TU VIDA</p>
-                <h2>Feliz cumpleaños 🎂</h2>
-                <div class="foto-dedicatoria"><img src="imagenes/feliz-cumpleanos1.jpg" alt="Fotografía de nosotras"></div>
-                <p class="dedicatoria"><p>
-Hoy celebro tu vida, tu sonrisa, tu forma de ser y todas esas pequeñas cosas
-que te hacen única para mí.
-</p>
+    <section id="carta" class="vista">
+      <article class="contenido">
+        <p class="fecha">MAMÁ, TODAVÍA ME QUEDA ALGO QUE DECIRTE</p>
+        <h2>Una carta para ti ✉</h2>
+        <div class="dedicatoria">
+          <p>Mamá:</p>
+          <p>No sé si alguna vez me he parado a decirte todo esto de verdad. Quizá porque cuando tienes algo toda la vida acabas pensando que siempre va a estar ahí. Y yo he tenido esa suerte contigo.</p>
+          <p>Desde que tengo memoria, <strong>siempre has estado.</strong> Estabas cuando era pequeña, en aquellas tardes de parque, en las vacaciones, en cada sitio al que íbamos juntas y en tantos momentos que hoy sería incapaz de escoger un solo recuerdo. Porque cuando pienso en mi infancia, inevitablemente, <strong>pienso en ti.</strong></p>
+          <p>Pienso en una madre cariñosa, aunque a veces también estricta. En una madre que se preocupaba, que cuidaba, que estaba pendiente y que hacía todo lo posible para que a sus hijas no les faltara nada. Entonces seguramente no entendía muchas cosas. Hoy sí.</p>
+          <p>Ahora sé que detrás de muchas de aquellas preocupaciones, de muchos «no», de muchos consejos e incluso de algún que otro enfado, había una madre intentando hacerlo lo mejor posible. <strong>Y lo hiciste muy bien, mamá.</strong></p>
+          <p>Sé que la vida no siempre ha sido fácil contigo. Que has tenido que pasar por momentos que probablemente nunca habrías elegido y que has tenido que aprender a seguir adelante incluso cuando las cosas dolían. Y, aun así, conseguiste construir algo precioso junto a papá: <strong>nuestra familia.</strong></p>
+        </div>
 
-<p>
-Pero también celebro la suerte de haberte conocido aquel día y de poder seguir
-compartiendo contigo tantos cumpleaños, tantos sueños y tantos momentos.
-</p>
+        <div class="foto-dedicatoria"><img src="imagenes/family_peques.jpg" alt="Nuestra familia cuando Pitufina era pequeña"></div>
+        <div class="dedicatoria">
+          <p>Y entre todas las cosas por las que tengo que daros las gracias hay una que vale oro. Recuerdo que, cuando era pequeña, me preguntasteis qué prefería: <strong>¿un perro o una hermana?</strong></p>
+          <p>Y yo lo tuve clarísimo.</p>
+          <p><strong>Elegí el perro. 😂</strong></p>
+          <p>Por suerte, papá y tú decidisteis no hacerme demasiado caso. Porque el <strong>12 de marzo de 2009</strong>, cuando yo tenía ocho años, llegó Pitufina. Y aquella niña que había elegido un perro todavía no tenía ni idea de que acababais de hacerme uno de los mejores regalos de mi vida.</p>
+          <p>Me habíais dado una hermana. Mi hermana. <strong>Mi Pitufina.</strong></p>
+        </div>
 
-<p>
-Ojalá este nuevo año te traiga todo lo bonito que mereces. Yo quiero seguir
-a tu lado para verlo, para acompañarte y para hacerte feliz siempre que pueda.
-</p>
+        <div class="foto-dedicatoria"><img src="imagenes/mama_maria_bebe.jpg" alt="Mamá con Pitufina cuando era pequeña"></div>
+        <div class="dedicatoria">
+          <p>La vida tampoco ha sido siempre fácil para ella. Ha pasado momentos malos, ha conseguido levantarse y también ha tenido recaídas. Pero nada de eso cambia quién es para mí. <strong>Mi hermana vale oro.</strong></p>
+          <p>Hoy puedo decirte que es la mejor hermana que podríais haberme dado. No la cambiaría por nada. <strong>Ni siquiera por aquel perro. 😂❤️</strong></p>
+        </div>
 
-<p>
-Feliz cumpleaños a la persona que, sin saberlo, terminó convirtiéndose en mi
-lugar favorito. Te quiero muchísimo. ❤️
-</p>
-                <button class="volver" data-vista="inicio">← Volver al árbol</button>
-            </article>
-        </section>
+        <div class="foto-dedicatoria"><img src="imagenes/mama_maria_actual.jpg" alt="Mamá y Pitufina actualmente"></div>
+        <div class="dedicatoria">
+          <p>Así que hay algo que siempre os agradeceré a papá y a ti: haberme dado a alguien con quien compartir nuestra familia, nuestros recuerdos y, espero, toda una vida. Gracias por ella, gracias por papá y gracias por haber construido nuestra familia. ❤️</p>
+          <p>Después crecí. Y llegó agosto de 2020. Después de prácticamente veinte años viviendo contigo, me fui. Y por primera vez aparecieron cientos de kilómetros entre nosotras. Manresa dejó de estar al otro lado de una habitación y pasó a estar lejos de mi casa.</p>
+          <p>Pensaba que simplemente me estaba independizando, pero con el tiempo entendí que también estaba aprendiendo algo que hasta entonces prácticamente no conocía: <strong>echar de menos a mi madre.</strong> Porque durante toda mi vida nunca había tenido que hacerlo. Nunca me habías faltado.</p>
+          <p>Ahora sé lo extraño que se siente un día en el que no hablamos. Hablamos prácticamente todos los días y puede parecer una tontería, pero escuchar tu voz forma parte de mi vida. Necesito contarte cómo me va en el trabajo, cómo llevo los estudios, si estoy bien, si estoy preocupada, alguna tontería que me ha pasado o simplemente hablar contigo sin que haya absolutamente nada importante que contar.</p>
+          <p>Y cuando no lo hacemos, lo noto. <strong>Me falta escucharte.</strong></p>
+          <p>Puede que tú y yo seamos diferentes. No tenemos el mismo carácter, no pensamos siempre igual y seguramente todavía tendremos muchos enfados y muchas diferencias por delante. Pero nunca he necesitado que fueras como yo. Solo necesito que sigas siendo tú. <strong>Mi madre.</strong></p>
+          <p>La que estaba cuando tenía cinco años. La que estaba cuando tenía quince. La que estaba cuando tenía veinte. Y la que sigue estando ahora que tengo veintiséis y estoy construyendo mi propia vida a cientos de kilómetros de ella.</p>
+          <p>Porque hay algo que no cambia por muchos años que cumpla: <strong>sigo necesitando a mi madre.</strong> Y probablemente siempre la necesitaré.</p>
+          <p>Hoy eres tú la que cumple años. 52. Pero si pudiera pedir yo un deseo al soplar tus velas, pediría uno muy sencillo: que no cambies. Que sigas llamándome, preguntándome cómo estoy y preocupándote por mi trabajo, por mis estudios, por mi salud y por todas esas cosas por las que una madre nunca deja de preocuparse.</p>
+          <p>Que sigamos hablando todos los días aunque no tengamos nada interesante que contarnos. Que sigamos viajando, riéndonos y haciendo fotografías. Que todavía nos queden muchísimos recuerdos por crear juntas.</p>
+          <p>Y pediría una cosa más. Probablemente la más egoísta de todas.</p>
+          <p><strong>Que nunca te vayas.</strong></p>
+          <p>Sé que es imposible pedirle eso a la vida. Pero si pudiera elegir, querría tenerte siempre a mi lado. Porque por muy lejos que viva, por muchos años que pasen y por mucho que cambie mi vida, siempre habrá una parte de mí que seguirá siendo aquella niña que sabía que, si algo iba mal, podía buscar a su madre. Y tú estarías allí.</p>
+          <p>Por eso, si algún día dudas de ti misma, si alguna vez piensas que podrías haber hecho las cosas mejor o te preguntas qué clase de madre has sido, quiero que recuerdes algo.</p>
+          <p><strong>Para mí eres la mejor madre que una persona podría tener.</strong></p>
+          <p>No porque seas perfecta, sino porque eres tú. Porque nunca me has faltado. Porque has estado en cada etapa de mi vida. Porque todavía hoy escuchar tu voz hace que todo parezca un poquito más cerca de casa.</p>
+          <p>Gracias por estos 26 años siendo mi madre. Gracias por nuestra familia. Gracias por papá. Gracias por mi Pitufina, aunque tardara algunos años en darme cuenta de que era bastante mejor regalo que un perro. 😂❤️</p>
+          <p>Y gracias, sobre todo, por estar.</p>
+          <p>Te quiero muchísimo, mamá. Seguramente mucho más de lo que te digo y mucho más de lo que sé explicar escribiendo.</p>
+          <p><strong>Feliz 52 cumpleaños.</strong></p>
+          <p>Y no cambies nunca. Yo solo quiero que sigas siendo mi mamá.</p>
+          <p><strong>Siempre. ❤️</strong></p>
+        </div>
 
-        <section id="aniversario" class="vista">
-            <article class="contenido">
-                <p class="fecha">OTRO CAPÍTULO DE NUESTRA HISTORIA</p>
-                <h2>Feliz aniversario ∞</h2>
-                <div class="foto-dedicatoria"><img src="imagenes/nuestro-aniversario.jpg" alt="Fotografía de nosotras"></div>
-                <p class="dedicatoria"><p>
-Hoy no solo celebramos que nos conocimos. Celebramos 7 años de nosotras,
-de elegirnos, de aprender juntas y de seguir construyendo nuestra historia.
-</p>
-
-<p>
-Siete años llenos de momentos que se han quedado para siempre en mi memoria.
-Algunos fáciles, otros más complicados, pero todos importantes porque los he
-vivido contigo.
-</p>
-
-<p>
-Si pudiera volver al día en que nos conocimos, volvería a elegirte sin pensarlo.
-Y si la vida me diera la oportunidad de empezar de nuevo, volvería a querer que
-fueras tú.
-</p>
-
-<p>
-Te elegiría una y otra vez. ❤️</p>
-                <button class="volver" data-vista="inicio">← Volver al árbol</button>
-            </article>
-        </section>
-
-        <section id="recuerdos" class="vista">
-            <article class="contenido">
-                <p class="fecha">MOMENTOS QUE GUARDO</p>
-                <h2>Nuestros recuerdos 📷</h2>
-                <div class="galeria">
-                    <img src="imagenes/nuestros-recuerdos.jpg" alt="Recuerdo 1">
-                    <img src="imagenes/recuerdo-2.jpg" alt="Recuerdo 2">
-                    <img src="imagenes/nuestra-familia1.jpg" alt="Recuerdo 3">
-                </div>
-                <p class="dedicatoria"><p>
-Si tuviera que elegir mis momentos favoritos, no sabría por cuál empezar.
-Están nuestras risas, nuestros viajes, nuestras conversaciones, nuestros abrazos,
-las tardes juntas y todas esas cosas aparentemente pequeñas que contigo se
-convierten en recuerdos enormes.
-</p>
-
-<p>
-Cada fotografía guarda un instante, pero también guarda una parte de lo que
-somos. Y cuando miro atrás, me doy cuenta de que mi vida está llena de momentos
-bonitos porque tú formas parte de ellos.
-</p>
-
-<p>
-Quiero seguir llenando nuestra historia de recuerdos, aventuras, fotografías,
-besos y días que algún día recordemos con una sonrisa.
-</p>
-
-<p>
-Todavía nos quedan muchísimos momentos por vivir. ❤️
-</p>
-                <button class="volver" data-vista="inicio">← Volver al árbol</button>
-            </article>
-        </section>
-
-        <section id="carta" class="vista">
-            <article class="contenido">
-                <p class="fecha">UN ÚLTIMO DETALLE</p>
-                <h2>Una carta para ti ✉</h2>
-                <div class="foto-dedicatoria"><img src="imagenes/foto1.jpg" alt="Fotografía de nosotras"></div>
-                <p class="dedicatoria"><p>
-No sé si alguna vez encontraré las palabras exactas para explicarte todo lo que
-significas para mí, pero sí sé que quiero seguir compartiendo mi vida contigo.
-</p>
-
-<p>
-Quiero seguir despertándome a tu lado, hacer planes contigo, superar los días
-difíciles, celebrar los buenos y construir un futuro en el que sigamos siendo
-nosotras.
-</p>
-
-<p>
-También quiero cumplir sueños contigo: casarnos, formar nuestra propia familia
-y, si la vida nos lo permite, tener hijos contigo. Me hace ilusión imaginar ese
-futuro a tu lado, porque no quiero que nuestra historia termine en estos 7 años.
-Quiero que estos 7 años sean solamente el principio.
-</p>
-
-<p>
-Gracias por estos años, por tu cariño, por tu paciencia y por todos los momentos
-que hemos compartido. Gracias por ser tú.
-</p>
-
-<p>
-Te quiero hoy, te quiero después de 7 años y quiero seguir eligiéndote durante
-todos los años que nos queden por vivir.
-
-<p>
-Siempre contigo. ❤️
-</p>
-                <button class="volver" data-vista="inicio">← Volver al árbol</button>
-            </article>
-        </section>
-    </main>
-
-    <script src="app.js"></script>
+        <div class="foto-dedicatoria"><img src="imagenes/mama_yo_actual.jpg" alt="Mamá y yo actualmente"></div>
+        <button class="volver" data-vista="inicio">← Volver al árbol</button>
+      </article>
+    </section>
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>
